@@ -10,5 +10,9 @@ typedef int TIPOCHAVE;
 
 typedef struct aux{
   TIPOCHAVE chave;
-  struct aux *esq, *dir;
+  struct aux *esq, *dir; //um ponteiro de mesma estrutura para subarvores
 } NO;
+
+typedef NO* PONT;
+
+

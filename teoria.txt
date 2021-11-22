@@ -1,0 +1,39 @@
+3.1. Árvores
+Uma árvore é um conjunto de nós composto de um nó especial (chamado raiz) e conjuntos disjuntos de nós
+subordinados ao nó raiz que são eles próprios (sub)árvores.
+
+Terminologia
+Grau de um nó: a quantidade de subárvores do nó;
+Grau de uma árvore: grau máximo dentre todos os nós da estrutura;
+Folhas de uma árvore: nós de grau zero;
+Filhos de x: raízes das subárvores de x; x é o nó pai de seus filhos;
+Ancestrais de x: todos nós no caminho desde a raiz até x.
+Nível de x: a raiz é nível 1; se um nó está no nível n, seus filhos estão no nível n+1;
+Altura de um nó folha é sempre 1;
+Altura de um nó não folha: a altura máxima dentre todas suas subárvores + 1;
+Altura de uma árvore é a altura de sua raiz.
+
+Uma árvore de grau m é dita m-ária. Árvores m-árias são de difícil representação e manipulação (por
+exemplo, a definição de muitos ponteiros em cada nó representa um grande desperdício de espaço ocupado
+por ponteiros NULL). Por este motivo, árvores m-árias são geralmente representadas por árvores binárias
+(veja definição a seguir) sem perda de propriedades.
+
+Em computação, árvores (e especialmente árvores binárias) são usadas para armazenar dados (chaves e outros
+campos de informação) em seus nós da mesma forma que listas sequenciais e listas ligadas.
+
+3.1.1. Árvores Binárias
+Uma árvore binária é uma estrutura vazia ou um nó raiz e duas subárvores chamadas esquerda e direita, as
+quais são também árvores binárias (vazias ou não). É importante observar que uma árvore binária não é
+apenas uma árvore de grau máximo dois, pois há também a questão de ordem (esquerda e direita) de
+subárvores, conceito este que não existe na definição de árvore comum discutida no item anterior.
+
+Uma vez que árvores m-árias não definem uma ordem específica entre as subárvores de cada nó, a conversão
+de árvore m-ária para binária é trivial: basta eleger um filho qualquer como raiz da subárvore esquerda, e os
+demais como subárvore direita e seus descendentes.
+
+O procedimento de conversão compreende dois passos:
+(a) todos os nós irmãos da árvore m-ária são interligados;
+(b) todas as conexões pai-filho são removidas, exceto a primeira de cada grupo.
+
+A árvore assim resultante pode ser redesenhada na posição correta (preservando-se as ligações esquerda e
+direita estabelecidas) formando uma árvore binária.
